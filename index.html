@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidrek po eto ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        .message {
+            font-size: 24px;
+            font-weight: 400;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px red; }
+            to { text-shadow: 0 0 20px pink; }
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #666;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">❤️</div>
+    <h1 class="message"> hi ajieee miss mo na ba ako ? 💖</h1>
+    <div class="buttons">
+        <button class="btn yes" onclick="loveYou()">Yes</button>
+        <button class="btn no" onclick="makeYesBigger()">No</button>
+    </div>
+    <script>
+        let yesButton = document.querySelector('.yes');
+        function makeYesBigger() {
+            let currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+            yesButton.style.fontSize = (currentSize + 10) + "px";
+        }
+        function loveYou() {
+            document.body.innerHTML = '<h1 class="message">HI Ajie cedy here, I’m really sorry about our last chat, di lang talaga ako okay nun and I wasn’t in the mood. But I didn’t mean to be distant, and ayoko na may tampo ka sa’kin huhuh. I miss you, pero alam ko may nagkakagusto na sa’yo, so ayoko maging epal choss hahaha pero at the same time, ayoko rin na magkatampo ka sa’kin. I hope you’re doing fine, ingat ka palagi, and if you ever need someone to talk to or lean on, I’m always here for you^^. </h1>';
+        }
+    </script>
+</body>
+</html>
